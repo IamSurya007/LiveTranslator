@@ -72,14 +72,14 @@ function App() {
             <div>
                 <label>From:</label>
                 <select value={from} onChange={(e) => setFrom(e.target.value)}>
-                    {languages.map(lang => (
+                    {languages?.map(lang => (
                         <option key={lang.code} value={lang.code}>{lang.name}</option>
                     ))}
                 </select>
 
                 <label>To:</label>
                 <select value={to} onChange={(e) => setTo(e.target.value)}>
-                    {languages.map(lang => (
+                    {languages?.map(lang => (
                         <option key={lang.code} value={lang.code}>{lang.name}</option>
                     ))}
                 </select>
