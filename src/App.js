@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { GiSpeaker } from "react-icons/gi";
 import { FaMicrophone } from "react-icons/fa";
-import axios from 'axios';
+import axios from './api.js';
 
 function App() {
     const [languages, setLanguages] = useState([
