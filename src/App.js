@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import './App.css';
 import { GiSpeaker } from "react-icons/gi";
 import { FaMicrophone } from "react-icons/fa";
+import axios from './api.js';
 
 function App() {
     const [languages, setLanguages] = useState([
@@ -32,7 +32,7 @@ function App() {
             targetLang: to
         };
 
-        axios.post('/api/translate/text', requestData)
+        axios.post('https://live-translator-451219.df.r.appspot.com/api/translate/text', requestData)
             .then(res => {
                 const translatedText = Object.keys(res.data)[0];
                 setOutput(translatedText);
